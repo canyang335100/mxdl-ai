@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replit AI - AI工具详细介绍 | MXDL AI</title>
+    <meta name="description" content="在线编程IDE集成AI，支持AI Agent自动编写应用，浏览器即可开发。了解Replit AI的功能、定价和使用方式，快速上手这款AI工具。">
+    <meta name="keywords" content="Replit AI, AI工具, AI编程, 编程, 在线IDE, AI编程">
+    <meta property="og:title" content="Replit AI - AI工具详细介绍 | MXDL AI">
+    <meta property="og:description" content="在线编程IDE集成AI，支持AI Agent自动编写应用，浏览器即可开发">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai.mxdl.online/tools/replit.html">
+    <link rel="canonical" href="https://ai.mxdl.online/tools/replit.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Replit AI",
+        "description": "在线编程IDE集成AI，支持AI Agent自动编写应用，浏览器即可开发",
+        "applicationCategory": "AI工具",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": " varies",
+            "priceCurrency": "CNY"
+        }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --primary: #6366f1; --primary-dark: #4f46e5; --primary-light: #818cf8; --bg: #0f0f1a; --bg-card: #1a1a2e; --bg-card-hover: #222240; --text: #e8e8f0; --text-muted: #9494b8; --border: #2a2a45; --gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899); --shadow: 0 4px 24px rgba(99,102,241,0.1); }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        a { color: var(--primary-light); text-decoration: none; }
+        a:hover { opacity: 0.8; }
+        
+        header { position: sticky; top: 0; z-index: 100; background: rgba(15,15,26,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+        header .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .logo { font-size: 22px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .logo span { -webkit-text-fill-color: #e8e8f0; font-weight: 400; font-size: 13px; }
+        .back-link { color: var(--text-muted); font-size: 14px; }
+        
+        .breadcrumb { padding: 24px 0 12px; font-size: 13px; color: var(--text-muted); }
+        .breadcrumb a { color: var(--text-muted); }
+        .breadcrumb span { color: var(--text); }
+        
+        .tool-header { padding: 24px 0 32px; border-bottom: 1px solid var(--border); }
+        .tool-header .icon { width: 64px; height: 64px; border-radius: 16px; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; color: white; margin-bottom: 16px; }
+        .tool-header h1 { font-size: 32px; font-weight: 800; margin-bottom: 12px; }
+        .tool-header .meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+        .tool-header .meta .tag { padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+        .tag-cat { background: rgba(99,102,241,0.12); color: var(--primary-light); }
+        .tag-price { background: rgba(239,68,68,0.1); color: #ef4444; }
+        .tag-free { background: rgba(34,197,94,0.1); color: #22c55e; }
+        .tag-freemium { background: rgba(99,102,241,0.1); color: var(--primary-light); }
+        .tool-header p { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 700px; margin-bottom: 20px; }
+        .btn-visit { display: inline-block; padding: 14px 36px; border-radius: 12px; background: var(--gradient); color: white; font-size: 15px; font-weight: 600; transition: all 0.25s; }
+        .btn-visit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,102,241,0.3); opacity: 1; }
+        
+        .tool-detail { padding: 32px 0; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .info-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+        .info-item .label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+        .info-item .value { font-size: 14px; font-weight: 600; }
+        
+        .tags-section { margin-bottom: 32px; }
+        .tags-section h3 { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        .tags-list { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tags-list span { padding: 4px 12px; border-radius: 6px; background: rgba(99,102,241,0.08); color: var(--text-muted); font-size: 13px; }
+        
+        .rating-display { margin-bottom: 24px; }
+        .rating-display .stars { color: #f59e0b; font-size: 20px; }
+        .rating-display .score { font-size: 14px; color: var(--text-muted); margin-left: 8px; }
+        
+        .affiliate-note { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+        
+        .related-tools { padding: 32px 0; border-top: 1px solid var(--border); }
+        .related-tools h2 { font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+        .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; transition: all 0.25s; }
+        .related-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .related-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+        .related-card p { font-size: 13px; color: var(--text-muted); }
+        
+        footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--text-muted); font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .tool-header h1 { font-size: 24px; }
+            .info-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MXDL <span>AI</span></a>
+            <a href="/" class="back-link">← 返回首页</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb">
+            <a href="/">首页</a> / <a href="/">AI编程</a> / <span>Replit AI</span>
+        </nav>
+
+        <div class="tool-header">
+            <div class="icon">R</div>
+            <h1>Replit AI</h1>
+            <div class="meta">
+                <span class="tag tag-cat">💻 AI编程</span>
+                <span class="tag tag-freemium">免费增值</span>
+                
+            </div>
+            <p>在线编程IDE集成AI，支持AI Agent自动编写应用，浏览器即可开发</p>
+            <a href="https://replit.com" class="btn-visit" target="_blank" rel="noopener">访问官网 →</a>
+        </div>
+
+        <div class="tool-detail">
+            <div class="rating-display">
+                <span class="stars">★★★★☆</span>
+                <span class="score">4/5</span>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="label">分类</div>
+                    <div class="value">💻 AI编程</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">定价方式</div>
+                    <div class="value" style="color:#6366f1">免费增值</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">官网</div>
+                    <div class="value"><a href="https://replit.com" target="_blank" rel="noopener">访问 →</a></div>
+                </div>
+                <div class="info-item">
+                    <div class="label">收录时间</div>
+                    <div class="value">2026年5月</div>
+                </div>
+            </div>
+
+            
+            <div class="tags-section">
+                <h3>标签</h3>
+                <div class="tags-list">
+                    <span>编程</span><span>在线IDE</span><span>AI编程</span><span>协作</span>
+                </div>
+            </div>
+
+            
+        </div>
+
+        
+        <div class="related-tools">
+            <h2>同类AI工具推荐</h2>
+            <div class="related-grid">
+                
+                <a href="/tools/cursor.html" class="related-card">
+                    <h4>Cursor</h4>
+                    <p>AI-first代码编辑器，内置GPT-4/Claude，支持智能补全、对话式编程...</p>
+                </a>
+                <a href="/tools/github-copilot.html" class="related-card">
+                    <h4>GitHub Copilot</h4>
+                    <p>GitHub推出的AI编程助手，集成在VS Code等IDE中，实时代码补全...</p>
+                </a>
+                <a href="/tools/trae.html" class="related-card">
+                    <h4>Trae</h4>
+                    <p>字节跳动推出的AI编程工具，支持自然语言描述生成完整应用...</p>
+                </a>
+                <a href="/tools/windsurf.html" class="related-card">
+                    <h4>Windsurf</h4>
+                    <p>Codeium推出的AI编程IDE，支持AI Flow模式进行全项目级别的智能编程...</p>
+                </a>
+                <a href="/tools/devin.html" class="related-card">
+                    <h4>Devin</h4>
+                    <p>AI软件工程师，能独立完成编程任务、调试和部署完整应用...</p>
+                </a>
+                <a href="/tools/codium.html" class="related-card">
+                    <h4>CodiumAI</h4>
+                    <p>AI代码测试工具，自动分析代码并生成测试用例，提升代码质量...</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="/">MXDL AI</a> · 发现最好用的AI工具 · 收录117+ AI工具</p>
+        </div>
+    </footer>
+</body>
+</html>
