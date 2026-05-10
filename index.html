@@ -187,12 +187,38 @@
         .tool-card {
             background: var(--bg-card); border: 1px solid var(--border);
             border-radius: 14px; padding: 24px;
-            transition: all 0.25s; cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;
             position: relative;
+            animation: cardFadeIn 0.5s ease both;
+        }
+        .tool-card:nth-child(1) { animation-delay: 0.02s; }
+        .tool-card:nth-child(2) { animation-delay: 0.06s; }
+        .tool-card:nth-child(3) { animation-delay: 0.1s; }
+        .tool-card:nth-child(4) { animation-delay: 0.14s; }
+        .tool-card:nth-child(5) { animation-delay: 0.18s; }
+        .tool-card:nth-child(6) { animation-delay: 0.22s; }
+        .tool-card:nth-child(7) { animation-delay: 0.26s; }
+        .tool-card:nth-child(8) { animation-delay: 0.3s; }
+        @keyframes cardFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .tool-card:hover {
-            border-color: var(--primary); transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            border-color: var(--primary); transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(99,102,241,0.15);
+        }
+        .tool-card.featured-card {
+            border-color: transparent;
+            background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+        }
+        .tool-card.featured-card::before {
+            content: ''; position: absolute; inset: -1px;
+            border-radius: 15px; padding: 1px;
+            background: linear-gradient(135deg, var(--primary), #a855f7);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
         }
         .tool-card .badge {
             position: absolute; top: 12px; right: 12px;
@@ -360,6 +386,51 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed; bottom: 24px; right: 24px;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--bg-card); border: 1px solid var(--border);
+            color: var(--text); font-size: 20px; cursor: pointer;
+            display: none; align-items: center; justify-content: center;
+            z-index: 100; transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        .scroll-top:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .scroll-top.show { display: flex; }
+
+        /* Loading spinner */
+        .loading-spinner {
+            text-align: center; padding: 60px 0; color: var(--text-muted);
+        }
+        .loading-spinner .spinner {
+            width: 40px; height: 40px; margin: 0 auto 16px;
+            border: 3px solid var(--border); border-top: 3px solid var(--primary);
+            border-radius: 50%; animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tip);
+            position: absolute; bottom: calc(100% + 8px); left: 50%;
+            transform: translateX(-50%); padding: 4px 10px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 6px; font-size: 12px; white-space: nowrap;
+            color: var(--text-muted); z-index: 10;
+        }
+
+        /* Skeleton loading */
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+            background-size: 200% 100%; animation: shimmer 1.5s infinite;
+            border-radius: 8px;
+        }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
     </style>
 </head>
 <body>
@@ -429,10 +500,11 @@
         <!-- All Tools -->
         <section class="all-tools" id="tools">
             <div class="container">
-                <h2 class="section-title">🔧 全部工具</h2>
+                <h2 class="section-title">🔧 全部工具 <span id="totalToolsBadge" style="font-size:16px;font-weight:400;color:var(--text-muted);"></span></h2>
                 <p class="section-sub">浏览所有收录的AI工具</p>
                 <div class="filter-bar" id="filterBar"></div>
                 <div class="tool-grid" id="allToolsGrid"></div>
+                <p id="resultsCount" style="text-align:center;color:var(--text-muted);font-size:13px;margin-top:16px;"></p>
                 <div class="load-more" id="loadMoreContainer" style="display:none;">
                     <button class="btn btn-outline" onclick="loadMore()">加载更多</button>
                 </div>
@@ -448,6 +520,9 @@
             </div>
         </section>
     </main>
+
+    <!-- Scroll to top -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
 
     <footer>
         <div class="container">
@@ -588,6 +663,8 @@
             document.getElementById('totalTools').textContent = allTools.length;
             document.getElementById('totalCategories').textContent = Object.keys(CATEGORIES).length;
             document.getElementById('freeTools').textContent = allTools.filter(t => t.pricing === 'free').length;
+            const badge = document.getElementById('totalToolsBadge');
+            if (badge) badge.textContent = `(${allTools.length} 个)`;
         }
 
         function renderCategories() {
@@ -614,9 +691,11 @@
             const initials = getInitials(t.name);
             const url = getToolUrl(t);
             const hasAffiliate = !!affiliateMap[t.id];
+            const isFeatured = t.featured;
+            const cardClass = isFeatured ? 'tool-card featured-card' : 'tool-card';
             const affBadge = hasAffiliate ? '<span class="badge badge-affiliate" title="通过此链接注册，支持本站持续运营">赚</span>' : '';
             return `
-                <div class="tool-card" onclick="window.open('${url}','_blank')">
+                <div class="${cardClass}" onclick="window.open('${url}','_blank')">
                     ${getPriceBadge(t.pricing)}
                     ${affBadge}
                     <div class="tool-icon">${initials}</div>
@@ -681,6 +760,10 @@
             }
 
             grid.innerHTML = toShow.map(t => renderToolCard(t)).join('');
+            
+            document.getElementById('resultsCount').textContent = filtered.length === allTools.length 
+                ? `共 ${allTools.length} 个AI工具` 
+                : `找到 ${filtered.length} 个工具（共 ${allTools.length} 个）`;
             
             const container = document.getElementById('loadMoreContainer');
             if (filtered.length > visibleCount) {
@@ -796,6 +879,16 @@
 
         // Init
         document.addEventListener('DOMContentLoaded', loadTools);
+
+        // Scroll to top button
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
 
         // Keyboard shortcut
         document.addEventListener('keydown', function(e) {
