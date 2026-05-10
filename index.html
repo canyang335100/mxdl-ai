@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MXDL AI - 发现最好用的AI工具</title>
+    <meta name="description" content="MXDL AI 导航站，精选收录600+ AI工具，涵盖写作、绘图、视频、编程、办公等全品类，帮你找到最合适的AI工具。">
+    <meta name="keywords" content="AI工具, AI导航, ChatGPT, AI写作, AI绘画, AI视频, AI编程">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --bg: #0f0f1a;
+            --bg-card: #1a1a2e;
+            --bg-card-hover: #222240;
+            --text: #e8e8f0;
+            --text-muted: #9494b8;
+            --border: #2a2a45;
+            --gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            --shadow: 0 4px 24px rgba(99,102,241,0.1);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(15,15,26,0.85); backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+        header .container {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 68px;
+        }
+        .logo {
+            font-size: 24px; font-weight: 800;
+            background: var(--gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            text-decoration: none; display: flex; align-items: center; gap: 8px;
+        }
+        .logo span { -webkit-text-fill-color: #e8e8f0; font-weight: 400; font-size: 14px; }
+        nav { display: flex; align-items: center; gap: 24px; }
+        nav a {
+            color: var(--text-muted); text-decoration: none; font-size: 14px;
+            transition: color 0.2s; cursor: pointer;
+        }
+        nav a:hover, nav a.active { color: var(--text); }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 64px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: 48px; font-weight: 800; margin-bottom: 16px;
+            background: var(--gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            line-height: 1.2;
+        }
+        .hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+        .search-box {
+            max-width: 640px; margin: 0 auto;
+            display: flex; gap: 0; border-radius: 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .search-box:focus-within {
+            border-color: var(--primary); box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+        }
+        .search-box input {
+            flex: 1; padding: 18px 24px; border: none; background: transparent;
+            color: var(--text); font-size: 16px; outline: none;
+        }
+        .search-box input::placeholder { color: var(--text-muted); }
+        .search-box button {
+            padding: 18px 32px; border: none;
+            background: var(--gradient); color: white; font-size: 16px;
+            font-weight: 600; cursor: pointer; transition: opacity 0.2s;
+        }
+        .search-box button:hover { opacity: 0.9; }
+
+        .search-tags { margin-top: 20px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .search-tags span { font-size: 13px; color: var(--text-muted); }
+        .search-tags a {
+            font-size: 13px; color: var(--primary-light); text-decoration: none;
+            padding: 4px 12px; border-radius: 20px; background: rgba(99,102,241,0.1);
+            cursor: pointer; transition: background 0.2s;
+        }
+        .search-tags a:hover { background: rgba(99,102,241,0.2); }
+
+        /* Stats */
+        .stats {
+            display: flex; justify-content: center; gap: 48px; padding: 32px 0 56px;
+        }
+        .stat-item { text-align: center; }
+        .stat-item .num { font-size: 32px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .stat-item .label { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+
+        /* Section title */
+        .section-title {
+            font-size: 28px; font-weight: 700; margin-bottom: 8px;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .section-sub { color: var(--text-muted); font-size: 15px; margin-bottom: 32px; }
+
+        /* Categories */
+        .categories { padding: 0 0 56px; }
+        .category-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        .category-card {
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            padding: 20px 12px; border-radius: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            cursor: pointer; transition: all 0.25s; text-decoration: none; color: var(--text);
+        }
+        .category-card:hover {
+            border-color: var(--primary); transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        .category-card .icon { font-size: 32px; }
+        .category-card .name { font-size: 13px; font-weight: 600; text-align: center; }
+        .category-card .count { font-size: 12px; color: var(--text-muted); }
+
+        /* Ads */
+        .ad-banner {
+            display: block; border-radius: 14px; overflow: hidden;
+            margin-bottom: 40px; text-decoration: none; position: relative;
+            background: var(--bg-card); border: 1px dashed var(--border);
+            transition: all 0.25s;
+        }
+        .ad-banner:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+        .ad-banner .ad-inner {
+            padding: 28px 32px; text-align: center;
+            background-size: cover; background-position: center;
+            min-height: 80px; display: flex; align-items: center;
+            justify-content: center; flex-direction: column; gap: 6px;
+        }
+        .ad-banner .ad-label {
+            position: absolute; top: 8px; left: 12px;
+            font-size: 10px; color: var(--text-muted); opacity: 0.5;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .ad-banner .ad-title {
+            font-size: 18px; font-weight: 700; color: white;
+        }
+        .ad-banner .ad-desc {
+            font-size: 13px; color: rgba(255,255,255,0.8);
+        }
+        .ad-banner.ad-placeholder .ad-inner {
+            background: var(--bg-card) !important;
+        }
+        .ad-banner.ad-placeholder .ad-title { color: var(--text-muted); font-weight: 500; font-size: 15px; }
+        .ad-banner.ad-placeholder .ad-desc { color: var(--text-muted); opacity: 0.6; font-size: 12px; }
+
+        /* Sponsored badge on tool cards */
+        .sponsored-tag {
+            position: absolute; top: 12px; left: 12px;
+            font-size: 9px; padding: 2px 8px; border-radius: 4px;
+            background: rgba(245,158,11,0.2); color: #f59e0b;
+            font-weight: 600; letter-spacing: 0.5px;
+        }
+
+        /* Featured tools */
+        .featured { padding: 0 0 56px; }
+        .tool-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        .tool-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 14px; padding: 24px;
+            transition: all 0.25s; cursor: pointer;
+            position: relative;
+        }
+        .tool-card:hover {
+            border-color: var(--primary); transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        .tool-card .badge {
+            position: absolute; top: 12px; right: 12px;
+            font-size: 11px; padding: 2px 10px; border-radius: 20px;
+            font-weight: 600;
+        }
+        .badge-free { background: rgba(34,197,94,0.15); color: #22c55e; }
+        .badge-paid { background: rgba(239,68,68,0.15); color: #ef4444; }
+        .badge-freemium { background: rgba(99,102,241,0.15); color: var(--primary-light); }
+        .badge-affiliate {
+            position: absolute; top: 12px; right: 52px;
+            font-size: 10px; padding: 2px 8px; border-radius: 20px;
+            font-weight: 700; background: rgba(245,158,11,0.15); color: #f59e0b;
+        }
+        .tool-card .tool-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: var(--gradient); display: flex; align-items: center;
+            justify-content: center; font-size: 20px; font-weight: 700; color: white;
+            margin-bottom: 16px;
+        }
+        .tool-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .tool-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+        .tool-card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .tool-card .tags span {
+            font-size: 12px; padding: 2px 8px; border-radius: 6px;
+            background: rgba(99,102,241,0.08); color: var(--text-muted);
+        }
+        .tool-card .tool-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border);
+        }
+        .tool-card .tool-footer .rating {
+            color: #f59e0b; font-size: 13px;
+        }
+        .tool-card .tool-footer a {
+            font-size: 13px; color: var(--primary-light); text-decoration: none;
+            font-weight: 600; transition: opacity 0.2s;
+        }
+        .tool-card .tool-footer a:hover { opacity: 0.8; }
+
+        /* All tools section */
+        .all-tools { padding: 0 0 56px; }
+        .filter-bar {
+            display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
+        }
+        .filter-btn {
+            padding: 8px 18px; border-radius: 24px; border: 1px solid var(--border);
+            background: transparent; color: var(--text-muted); font-size: 13px;
+            cursor: pointer; transition: all 0.2s; font-weight: 500;
+        }
+        .filter-btn:hover { border-color: var(--primary); color: var(--text); }
+        .filter-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+        .price-filter { display: flex; gap: 8px; margin-left: auto; }
+        .price-btn {
+            padding: 8px 14px; border-radius: 24px; border: 1px solid var(--border);
+            background: transparent; color: var(--text-muted); font-size: 12px;
+            cursor: pointer; transition: all 0.2s;
+        }
+        .price-btn:hover { border-color: var(--primary); }
+        .price-btn.active { background: var(--bg-card); border-color: var(--primary-light); color: var(--primary-light); }
+
+        /* Submit section */
+        .submit-section {
+            padding: 56px 0; border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        .submit-section h2 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+        .submit-section p { color: var(--text-muted); max-width: 500px; margin: 0 auto 28px; }
+        .btn {
+            display: inline-block; padding: 14px 36px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; text-decoration: none;
+            transition: all 0.25s; cursor: pointer; border: none;
+        }
+        .btn-primary { background: var(--gradient); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,102,241,0.3); }
+        .btn-outline {
+            background: transparent; border: 1px solid var(--border);
+            color: var(--text); 
+        }
+        .btn-outline:hover { border-color: var(--primary); }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border); padding: 40px 0;
+            text-align: center; color: var(--text-muted); font-size: 14px;
+        }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--text); }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed; inset: 0; z-index: 200;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+            display: none; align-items: center; justify-content: center;
+            padding: 24px;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 20px; max-width: 520px; width: 100%;
+            padding: 36px; max-height: 90vh; overflow-y: auto;
+        }
+        .modal h2 { font-size: 22px; margin-bottom: 8px; }
+        .modal p { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+        .modal .close-btn {
+            float: right; background: none; border: none; color: var(--text-muted);
+            font-size: 24px; cursor: pointer;
+        }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px 16px; border-radius: 10px;
+            border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+            color: var(--text); font-size: 14px; outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group select option { background: var(--bg-card); color: var(--text); }
+
+        /* Toast */
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            padding: 14px 28px; border-radius: 12px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            color: var(--text); font-size: 14px; z-index: 300;
+            display: none; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .toast.show { display: block; animation: fadeInUp 0.3s ease; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .tool-grid { grid-template-columns: 1fr; }
+            .stats { gap: 24px; }
+            .stat-item .num { font-size: 24px; }
+            .category-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+            nav { gap: 14px; }
+            nav a { font-size: 13px; }
+            .filter-bar { flex-direction: column; }
+            .price-filter { margin-left: 0; }
+        }
+
+        /* Load more */
+        .load-more {
+            text-align: center; margin-top: 32px;
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center; padding: 60px 0;
+            color: var(--text-muted);
+        }
+        .no-results h3 { font-size: 20px; margin-bottom: 8px; color: var(--text); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MXDL <span>AI</span></a>
+            <nav>
+                <a href="#categories">分类</a>
+                <a href="#tools">全部工具</a>
+                <a href="#submit">提交工具</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>发现最好用的 AI 工具</h1>
+                <p>精选收录600+ AI工具，涵盖写作、绘图、视频、编程等全品类<br>帮你找到最合适的AI工具，提升效率、激发创意</p>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索AI工具，如 ChatGPT、AI绘图..." />
+                    <button onclick="handleSearch()">搜索</button>
+                </div>
+                <div class="search-tags">
+                    <span>热门：</span>
+                    <a onclick="quickSearch('ChatGPT')">ChatGPT</a>
+                    <a onclick="quickSearch('AI绘图')">AI绘图</a>
+                    <a onclick="quickSearch('AI视频')">AI视频</a>
+                    <a onclick="quickSearch('AI编程')">AI编程</a>
+                    <a onclick="quickSearch('免费')">免费工具</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-item"><div class="num" id="totalTools">0</div><div class="label">收录工具</div></div>
+            <div class="stat-item"><div class="num" id="totalCategories">0</div><div class="label">分类</div></div>
+            <div class="stat-item"><div class="num" id="freeTools">0</div><div class="label">免费工具</div></div>
+        </section>
+
+        <!-- Ad Banner Top -->
+        <div class="container" id="adBannerTop"></div>
+
+        <!-- Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h2 class="section-title">📂 分类浏览</h2>
+                <p class="section-sub">按类别快速找到你需要的AI工具</p>
+                <div class="category-grid" id="categoryGrid"></div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">⭐ 精选推荐</h2>
+                <p class="section-sub">编辑精选的优质AI工具</p>
+                <div class="tool-grid" id="featuredGrid"></div>
+            </div>
+        </section>
+
+        <!-- Ad Banner Mid -->
+        <div class="container" id="adBannerMid"></div>
+
+        <!-- All Tools -->
+        <section class="all-tools" id="tools">
+            <div class="container">
+                <h2 class="section-title">🔧 全部工具</h2>
+                <p class="section-sub">浏览所有收录的AI工具</p>
+                <div class="filter-bar" id="filterBar"></div>
+                <div class="tool-grid" id="allToolsGrid"></div>
+                <div class="load-more" id="loadMoreContainer" style="display:none;">
+                    <button class="btn btn-outline" onclick="loadMore()">加载更多</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit -->
+        <section class="submit-section" id="submit">
+            <div class="container">
+                <h2>📮 提交AI工具</h2>
+                <p>发现了好的AI工具？提交给我们，让更多人发现它！免费收录，付费置顶推广。</p>
+                <button class="btn btn-primary" onclick="openSubmitModal()">立即提交工具</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><a href="/">MXDL AI</a> · 发现最好用的AI工具 · 收录600+ AI工具持续更新中</p>
+            <p style="margin-top:8px;font-size:12px;">联系合作：mxdl@mxdl.online</p>
+        </div>
+    </footer>
+
+    <!-- Submit Modal -->
+    <div class="modal-overlay" id="submitModal">
+        <div class="modal">
+            <button class="close-btn" onclick="closeSubmitModal()">✕</button>
+            <h2>提交AI工具</h2>
+            <p>填写工具信息，审核通过后将在网站展示。如需加急收录或置顶推广，请联系我们。</p>
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label>工具名称 *</label>
+                    <input type="text" required placeholder="如：ChatGPT">
+                </div>
+                <div class="form-group">
+                    <label>官网链接 *</label>
+                    <input type="url" required placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label>一句话描述 *</label>
+                    <input type="text" required placeholder="简要描述工具的功能">
+                </div>
+                <div class="form-group">
+                    <label>分类 *</label>
+                    <select id="submitCategory">
+                        <option value="ai-writing">AI写作</option>
+                        <option value="ai-image">AI绘图</option>
+                        <option value="ai-video">AI视频</option>
+                        <option value="ai-coding">AI编程</option>
+                        <option value="ai-design">AI设计</option>
+                        <option value="ai-audio">AI音频</option>
+                        <option value="ai-office">AI办公</option>
+                        <option value="ai-marketing">AI营销</option>
+                        <option value="ai-agent">AI智能体</option>
+                        <option value="ai-search">AI搜索</option>
+                        <option value="ai-education">AI教育</option>
+                        <option value="ai-data">AI数据</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>定价方式</label>
+                    <select>
+                        <option value="free">免费</option>
+                        <option value="free-premium">免费增值</option>
+                        <option value="paid">付费</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>详细描述</label>
+                    <textarea placeholder="详细介绍工具的功能和特点（选填）"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">提交审核</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        let allTools = [];
+        let affiliateMap = {};
+        let adsConfig = {};
+        let currentFilter = 'all';
+        let currentPrice = 'all';
+        let visibleCount = 18;
+        let currentSearch = '';
+
+        const CATEGORIES = {
+            'ai-writing': { name: 'AI写作', icon: '✍️' },
+            'ai-image': { name: 'AI绘图', icon: '🎨' },
+            'ai-video': { name: 'AI视频', icon: '🎬' },
+            'ai-coding': { name: 'AI编程', icon: '💻' },
+            'ai-design': { name: 'AI设计', icon: '🖌️' },
+            'ai-audio': { name: 'AI音频', icon: '🎵' },
+            'ai-office': { name: 'AI办公', icon: '📊' },
+            'ai-marketing': { name: 'AI营销', icon: '📣' },
+            'ai-agent': { name: 'AI智能体', icon: '🤖' },
+            'ai-search': { name: 'AI搜索', icon: '🔍' },
+            'ai-education': { name: 'AI教育', icon: '📚' },
+            'ai-data': { name: 'AI数据', icon: '📈' }
+        };
+
+        const PRICE_LABELS = {
+            'free': '免费',
+            'free-premium': '免费增值',
+            'paid': '付费'
+        };
+
+        function getPriceBadge(pricing) {
+            if (pricing === 'free') return '<span class="badge badge-free">免费</span>';
+            if (pricing === 'free-premium') return '<span class="badge badge-freemium">免费增值</span>';
+            return '<span class="badge badge-paid">付费</span>';
+        }
+
+        function getInitials(name) {
+            return name.charAt(0).toUpperCase();
+        }
+
+        function getToolUrl(t) {
+            return affiliateMap[t.id] || t.url;
+        }
+
+        // Load tools
+        async function loadTools() {
+            try {
+                const [toolsRes, affRes, adsRes] = await Promise.all([
+                    fetch('data/tools.json'),
+                    fetch('data/affiliates.json'),
+                    fetch('data/ads.json')
+                ]);
+                allTools = await toolsRes.json();
+                const affData = await affRes.json();
+                affiliateMap = affData.affiliates || {};
+                adsConfig = await adsRes.json();
+                render();
+                renderAds();
+            } catch(e) {
+                // Fallback if fetch fails
+                document.getElementById('allToolsGrid').innerHTML = '<div class="no-results"><h3>加载中...</h3></div>';
+            }
+        }
+
+        function render() {
+            renderStats();
+            renderCategories();
+            renderFeatured();
+            renderFilterBar();
+            renderAllTools();
+        }
+
+        function renderStats() {
+            document.getElementById('totalTools').textContent = allTools.length;
+            document.getElementById('totalCategories').textContent = Object.keys(CATEGORIES).length;
+            document.getElementById('freeTools').textContent = allTools.filter(t => t.pricing === 'free').length;
+        }
+
+        function renderCategories() {
+            const grid = document.getElementById('categoryGrid');
+            const counts = {};
+            allTools.forEach(t => { counts[t.category] = (counts[t.category] || 0) + 1; });
+            
+            grid.innerHTML = Object.entries(CATEGORIES).map(([key, val]) => `
+                <a class="category-card" onclick="filterByCategory('${key}')">
+                    <div class="icon">${val.icon}</div>
+                    <div class="name">${val.name}</div>
+                    <div class="count">${counts[key] || 0} 个工具</div>
+                </a>
+            `).join('');
+        }
+
+        function renderFeatured() {
+            const grid = document.getElementById('featuredGrid');
+            const featured = allTools.filter(t => t.featured);
+            grid.innerHTML = featured.map(t => renderToolCard(t)).join('');
+        }
+
+        function renderToolCard(t) {
+            const initials = getInitials(t.name);
+            const url = getToolUrl(t);
+            const hasAffiliate = !!affiliateMap[t.id];
+            const affBadge = hasAffiliate ? '<span class="badge badge-affiliate" title="通过此链接注册，支持本站持续运营">赚</span>' : '';
+            return `
+                <div class="tool-card" onclick="window.open('${url}','_blank')">
+                    ${getPriceBadge(t.pricing)}
+                    ${affBadge}
+                    <div class="tool-icon">${initials}</div>
+                    <h3>${t.name}</h3>
+                    <p>${t.description}</p>
+                    <div class="tags">
+                        ${t.tags.slice(0,3).map(tag => `<span>${tag}</span>`).join('')}
+                    </div>
+                    <div class="tool-footer">
+                        <span class="rating">${'★'.repeat(Math.floor(t.rating || 3))}${'☆'.repeat(5 - Math.floor(t.rating || 3))}</span>
+                        <a href="${url}" target="_blank">访问官网 →</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFilterBar() {
+            const bar = document.getElementById('filterBar');
+            const allFilter = `<button class="filter-btn ${currentFilter === 'all' ? 'active' : ''}" onclick="filterByCategory('all')">全部</button>`;
+            const catBtns = Object.entries(CATEGORIES).map(([key, val]) => `
+                <button class="filter-btn ${currentFilter === key ? 'active' : ''}" onclick="filterByCategory('${key}')">${val.icon} ${val.name}</button>
+            `).join('');
+            const priceFilter = `
+                <div class="price-filter">
+                    <button class="price-btn ${currentPrice === 'all' ? 'active' : ''}" onclick="filterByPrice('all')">全部</button>
+                    <button class="price-btn ${currentPrice === 'free' ? 'active' : ''}" onclick="filterByPrice('free')">免费</button>
+                    <button class="price-btn ${currentPrice === 'free-premium' ? 'active' : ''}" onclick="filterByPrice('free-premium')">免费增值</button>
+                    <button class="price-btn ${currentPrice === 'paid' ? 'active' : ''}" onclick="filterByPrice('paid')">付费</button>
+                </div>
+            `;
+            bar.innerHTML = allFilter + catBtns + priceFilter;
+        }
+
+        function getFilteredTools() {
+            let filtered = allTools;
+            if (currentSearch) {
+                const q = currentSearch.toLowerCase();
+                filtered = filtered.filter(t => 
+                    t.name.toLowerCase().includes(q) || 
+                    t.description.toLowerCase().includes(q) ||
+                    t.tags.some(tag => tag.toLowerCase().includes(q))
+                );
+            }
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(t => t.category === currentFilter);
+            }
+            if (currentPrice !== 'all') {
+                filtered = filtered.filter(t => t.pricing === currentPrice);
+            }
+            return filtered;
+        }
+
+        function renderAllTools() {
+            const grid = document.getElementById('allToolsGrid');
+            const filtered = getFilteredTools();
+            const toShow = filtered.slice(0, visibleCount);
+
+            if (toShow.length === 0) {
+                grid.innerHTML = '<div class="no-results"><h3>😕 没有找到匹配的工具</h3><p>试试其他关键词或分类</p></div>';
+                document.getElementById('loadMoreContainer').style.display = 'none';
+                return;
+            }
+
+            grid.innerHTML = toShow.map(t => renderToolCard(t)).join('');
+            
+            const container = document.getElementById('loadMoreContainer');
+            if (filtered.length > visibleCount) {
+                container.style.display = 'block';
+                container.querySelector('button').textContent = `加载更多（${filtered.length - visibleCount} 个待显示）`;
+            } else {
+                container.style.display = 'none';
+            }
+        }
+
+        function loadMore() {
+            visibleCount += 12;
+            renderAllTools();
+            scrollToTools();
+        }
+
+        function scrollToTools() {
+            document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Ads
+        function renderAdBanner(containerId, adKey) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            const ad = adsConfig[adKey];
+            if (!ad || !ad.active) {
+                // Show placeholder ad slot
+                container.innerHTML = `
+                    <a class="ad-banner ad-placeholder" href="${ad && ad.url ? ad.url : 'mailto:mxdl@mxdl.online'}" target="_blank">
+                        <span class="ad-label">广告</span>
+                        <div class="ad-inner">
+                            <div class="ad-title">${ad && ad.title ? ad.title : '📢 广告位招租'}</div>
+                            <div class="ad-desc">${ad && ad.description ? ad.description : '在此处展示您的品牌 — 联系：mxdl@mxdl.online'}</div>
+                        </div>
+                    </a>
+                `;
+                return;
+            }
+            const bg = ad.bgColor ? `style="background:${ad.bgColor}"` : '';
+            container.innerHTML = `
+                <a class="ad-banner" href="${ad.url}" target="_blank" rel="sponsored">
+                    <span class="ad-label">广告</span>
+                    <div class="ad-inner" ${bg}>
+                        <div class="ad-title">${ad.title}</div>
+                        ${ad.description ? `<div class="ad-desc">${ad.description}</div>` : ''}
+                    </div>
+                </a>
+            `;
+        }
+
+        function renderAds() {
+            renderAdBanner('adBannerTop', 'banner_top');
+            renderAdBanner('adBannerMid', 'banner_mid');
+        }
+
+        function filterByCategory(cat) {
+            currentFilter = cat;
+            visibleCount = 18;
+            renderFilterBar();
+            renderAllTools();
+        }
+
+        function filterByPrice(price) {
+            currentPrice = price;
+            visibleCount = 18;
+            renderFilterBar();
+            renderAllTools();
+        }
+
+        function handleSearch() {
+            const input = document.getElementById('searchInput');
+            currentSearch = input.value.trim();
+            currentFilter = 'all';
+            currentPrice = 'all';
+            visibleCount = 18;
+            renderFilterBar();
+            renderAllTools();
+            if (currentSearch) {
+                document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function quickSearch(q) {
+            document.getElementById('searchInput').value = q;
+            handleSearch();
+        }
+
+        // Modal
+        function openSubmitModal() {
+            document.getElementById('submitModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSubmitModal() {
+            document.getElementById('submitModal').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('submitModal').addEventListener('click', function(e) {
+            if (e.target === this) closeSubmitModal();
+        });
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            closeSubmitModal();
+            showToast('✅ 提交成功！我们会在24小时内审核并收录。');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', loadTools);
+
+        // Keyboard shortcut
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeSubmitModal();
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>

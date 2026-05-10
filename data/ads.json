@@ -1,0 +1,24 @@
+{
+  "_note": "广告配置管理，active=true 才会显示",
+  "banner_top": {
+    "active": false,
+    "title": "广告位招租",
+    "description": "在此处展示您的品牌 — 联系：mxdl@mxdl.online",
+    "image": "",
+    "url": "mailto:mxdl@mxdl.online",
+    "bgColor": "linear-gradient(135deg, #6366f1, #4f46e5)"
+  },
+  "banner_mid": {
+    "active": false,
+    "title": "广告位招租",
+    "description": "精选推荐下方黄金广告位 — 联系：mxdl@mxdl.online",
+    "image": "",
+    "url": "mailto:mxdl@mxdl.online",
+    "bgColor": "linear-gradient(135deg, #8b5cf6, #6366f1)"
+  },
+  "sponsored_tools": {
+    "active": false,
+    "tools": [],
+    "_说明": "置顶推荐工具，显示在精选推荐区域，格式：[工具ID, 展示名称, 链接]"
+  }
+}

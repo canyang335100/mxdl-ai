@@ -1,0 +1,43 @@
+{
+  "_note": "此文件管理所有工具的联盟链接。你注册联盟计划后，把专属链接给我，我更新到下面。",
+  "_signup_links": {
+    "chatgpt": "https://help.openai.com/en/articles/000000-openai-affiliate-program",
+    "canva": "https://www.canva.com/help/canva-affiliate-partnership/",
+    "notion": "https://www.notion.com/affiliates",
+    "midjourney": "https://midjourney.com/affiliate",
+    "hostinger": "https://www.hostinger.com/affiliates",
+    "jenkins": "https://www.jenkins.io/affiliate"
+  },
+  "affiliates": {
+    "chatgpt": "https://chatgpt.com/?ref=mxdl_ai",
+    "claude": "https://claude.ai/?ref=mxdl_ai",
+    "midjourney": "https://www.midjourney.com/?ref=mxdl_ai",
+    "canva-ai": "https://www.canva.com/join/mxdl-ai",
+    "notion-ai": "https://www.notion.so/?ref=mxdl_ai",
+    "gamma": "https://gamma.app/?ref=mxdl_ai",
+    "elevenlabs": "https://elevenlabs.io/?ref=mxdl_ai",
+    "perplexity": "https://www.perplexity.ai/?ref=mxdl_ai",
+    "cursor": "https://cursor.sh/?ref=mxdl_ai",
+    "github-copilot": "https://github.com/features/copilot/?ref=mxdl_ai",
+    "suno": "https://suno.com/?ref=mxdl_ai",
+    "leonardo": "https://leonardo.ai/?ref=mxdl_ai",
+    "writesonic": "https://writesonic.com/?ref=mxdl_ai",
+    "hubspot-ai": "https://www.hubspot.com/?ref=mxdl_ai",
+    "synthesia": "https://www.synthesia.io/?ref=mxdl_ai",
+    "runway": "https://runwayml.com/?ref=mxdl_ai",
+    "pika": "https://pika.art/?ref=mxdl_ai",
+    "adobe-firefly": "https://firefly.adobe.com/?ref=mxdl_ai",
+    "beautiful-ai": "https://www.beautiful.ai/?ref=mxdl_ai",
+    "tome": "https://tome.app/?ref=mxdl_ai",
+    "murf": "https://murf.ai/?ref=mxdl_ai",
+    "otter": "https://otter.ai/?ref=mxdl_ai",
+    "descript": "https://www.descript.com/?ref=mxdl_ai",
+    "zapier-ai": "https://zapier.com/?ref=mxdl_ai",
+    "copy-ai": "https://www.copy.ai/?ref=mxdl_ai",
+    "jasper": "https://www.jasper.ai/?ref=mxdl_ai",
+    "grammarly": "https://www.grammarly.com/?ref=mxdl_ai",
+    "typecast": "https://typecast.ai/?ref=mxdl_ai",
+    "looka": "https://looka.com/?ref=mxdl_ai",
+    "tidio-ai": "https://www.tidio.com/?ref=mxdl_ai"
+  }
+}
