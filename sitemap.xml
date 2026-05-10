@@ -1,652 +1,652 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ai.mxdl.online/</loc>
+    <loc>http://ai.mxdl.online/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-writing.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-writing.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-image.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-image.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-video.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-video.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-coding.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-coding.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-design.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-design.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-audio.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-audio.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-office.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-office.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-marketing.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-marketing.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-agent.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-agent.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-search.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-search.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-education.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-education.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/category/ai-data.html</loc>
+    <loc>http://ai.mxdl.online/category/ai-data.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/chatgpt.html</loc>
+    <loc>http://ai.mxdl.online/tools/chatgpt.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/claude.html</loc>
+    <loc>http://ai.mxdl.online/tools/claude.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/doubao.html</loc>
+    <loc>http://ai.mxdl.online/tools/doubao.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/kimi.html</loc>
+    <loc>http://ai.mxdl.online/tools/kimi.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/wenxin.html</loc>
+    <loc>http://ai.mxdl.online/tools/wenxin.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tongyi.html</loc>
+    <loc>http://ai.mxdl.online/tools/tongyi.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/deepseek.html</loc>
+    <loc>http://ai.mxdl.online/tools/deepseek.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/midjourney.html</loc>
+    <loc>http://ai.mxdl.online/tools/midjourney.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/dalle3.html</loc>
+    <loc>http://ai.mxdl.online/tools/dalle3.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/stable-diffusion.html</loc>
+    <loc>http://ai.mxdl.online/tools/stable-diffusion.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/canva-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/canva-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/jianying.html</loc>
+    <loc>http://ai.mxdl.online/tools/jianying.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/runway.html</loc>
+    <loc>http://ai.mxdl.online/tools/runway.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/sora.html</loc>
+    <loc>http://ai.mxdl.online/tools/sora.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/cursor.html</loc>
+    <loc>http://ai.mxdl.online/tools/cursor.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/github-copilot.html</loc>
+    <loc>http://ai.mxdl.online/tools/github-copilot.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/trae.html</loc>
+    <loc>http://ai.mxdl.online/tools/trae.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/windsurf.html</loc>
+    <loc>http://ai.mxdl.online/tools/windsurf.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/notion-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/notion-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/feishu-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/feishu-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/gamma.html</loc>
+    <loc>http://ai.mxdl.online/tools/gamma.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/luma-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/luma-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/pika.html</loc>
+    <loc>http://ai.mxdl.online/tools/pika.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/heygen.html</loc>
+    <loc>http://ai.mxdl.online/tools/heygen.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/leonardo.html</loc>
+    <loc>http://ai.mxdl.online/tools/leonardo.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/comfyui.html</loc>
+    <loc>http://ai.mxdl.online/tools/comfyui.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/coze.html</loc>
+    <loc>http://ai.mxdl.online/tools/coze.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/dify.html</loc>
+    <loc>http://ai.mxdl.online/tools/dify.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/perplexity.html</loc>
+    <loc>http://ai.mxdl.online/tools/perplexity.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/360-ai-search.html</loc>
+    <loc>http://ai.mxdl.online/tools/360-ai-search.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/elevenlabs.html</loc>
+    <loc>http://ai.mxdl.online/tools/elevenlabs.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/suno.html</loc>
+    <loc>http://ai.mxdl.online/tools/suno.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tts-maker.html</loc>
+    <loc>http://ai.mxdl.online/tools/tts-maker.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/jasper.html</loc>
+    <loc>http://ai.mxdl.online/tools/jasper.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/copy-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/copy-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/hubspot-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/hubspot-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/grammarly.html</loc>
+    <loc>http://ai.mxdl.online/tools/grammarly.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/xiaoce.html</loc>
+    <loc>http://ai.mxdl.online/tools/xiaoce.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/removebg.html</loc>
+    <loc>http://ai.mxdl.online/tools/removebg.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/kling.html</loc>
+    <loc>http://ai.mxdl.online/tools/kling.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/vizard.html</loc>
+    <loc>http://ai.mxdl.online/tools/vizard.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/replit.html</loc>
+    <loc>http://ai.mxdl.online/tools/replit.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/devin.html</loc>
+    <loc>http://ai.mxdl.online/tools/devin.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/chatmind.html</loc>
+    <loc>http://ai.mxdl.online/tools/chatmind.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/beautiful-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/beautiful-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/otter.html</loc>
+    <loc>http://ai.mxdl.online/tools/otter.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/khanmigo.html</loc>
+    <loc>http://ai.mxdl.online/tools/khanmigo.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/duolingo.html</loc>
+    <loc>http://ai.mxdl.online/tools/duolingo.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/quizlet.html</loc>
+    <loc>http://ai.mxdl.online/tools/quizlet.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tableau.html</loc>
+    <loc>http://ai.mxdl.online/tools/tableau.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/julius.html</loc>
+    <loc>http://ai.mxdl.online/tools/julius.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/imagine-me.html</loc>
+    <loc>http://ai.mxdl.online/tools/imagine-me.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/n8n.html</loc>
+    <loc>http://ai.mxdl.online/tools/n8n.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/zapier-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/zapier-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/codium.html</loc>
+    <loc>http://ai.mxdl.online/tools/codium.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/murf.html</loc>
+    <loc>http://ai.mxdl.online/tools/murf.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/adobe-firefly.html</loc>
+    <loc>http://ai.mxdl.online/tools/adobe-firefly.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/figma-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/figma-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/looka.html</loc>
+    <loc>http://ai.mxdl.online/tools/looka.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/descript.html</loc>
+    <loc>http://ai.mxdl.online/tools/descript.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/synthesia.html</loc>
+    <loc>http://ai.mxdl.online/tools/synthesia.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/consensus.html</loc>
+    <loc>http://ai.mxdl.online/tools/consensus.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/notion-calendar.html</loc>
+    <loc>http://ai.mxdl.online/tools/notion-calendar.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tome.html</loc>
+    <loc>http://ai.mxdl.online/tools/tome.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/speechify.html</loc>
+    <loc>http://ai.mxdl.online/tools/speechify.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/cleanvoice.html</loc>
+    <loc>http://ai.mxdl.online/tools/cleanvoice.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tidio-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/tidio-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/typeface.html</loc>
+    <loc>http://ai.mxdl.online/tools/typeface.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/writesonic.html</loc>
+    <loc>http://ai.mxdl.online/tools/writesonic.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/gemini.html</loc>
+    <loc>http://ai.mxdl.online/tools/gemini.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/grok.html</loc>
+    <loc>http://ai.mxdl.online/tools/grok.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/zhipu.html</loc>
+    <loc>http://ai.mxdl.online/tools/zhipu.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/xunfei.html</loc>
+    <loc>http://ai.mxdl.online/tools/xunfei.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tencent-hunyuan.html</loc>
+    <loc>http://ai.mxdl.online/tools/tencent-hunyuan.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tian-gong.html</loc>
+    <loc>http://ai.mxdl.online/tools/tian-gong.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/baichuan.html</loc>
+    <loc>http://ai.mxdl.online/tools/baichuan.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/ideogram.html</loc>
+    <loc>http://ai.mxdl.online/tools/ideogram.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/clipdrop.html</loc>
+    <loc>http://ai.mxdl.online/tools/clipdrop.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/playground.html</loc>
+    <loc>http://ai.mxdl.online/tools/playground.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/wenxin-yige.html</loc>
+    <loc>http://ai.mxdl.online/tools/wenxin-yige.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tongyi-wanxiang.html</loc>
+    <loc>http://ai.mxdl.online/tools/tongyi-wanxiang.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/invideo.html</loc>
+    <loc>http://ai.mxdl.online/tools/invideo.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/veed.html</loc>
+    <loc>http://ai.mxdl.online/tools/veed.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/fliki.html</loc>
+    <loc>http://ai.mxdl.online/tools/fliki.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/pictory.html</loc>
+    <loc>http://ai.mxdl.online/tools/pictory.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/bolt-new.html</loc>
+    <loc>http://ai.mxdl.online/tools/bolt-new.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/lovable.html</loc>
+    <loc>http://ai.mxdl.online/tools/lovable.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/codeium.html</loc>
+    <loc>http://ai.mxdl.online/tools/codeium.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tabnine.html</loc>
+    <loc>http://ai.mxdl.online/tools/tabnine.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/amazon-q.html</loc>
+    <loc>http://ai.mxdl.online/tools/amazon-q.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/continue.html</loc>
+    <loc>http://ai.mxdl.online/tools/continue.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/uizard.html</loc>
+    <loc>http://ai.mxdl.online/tools/uizard.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/galileo-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/galileo-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/framer-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/framer-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/wps-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/wps-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/dingtalk-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/dingtalk-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/tencent-yuanbao.html</loc>
+    <loc>http://ai.mxdl.online/tools/tencent-yuanbao.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/mita-search.html</loc>
+    <loc>http://ai.mxdl.online/tools/mita-search.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/you-dot-com.html</loc>
+    <loc>http://ai.mxdl.online/tools/you-dot-com.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/play-ht.html</loc>
+    <loc>http://ai.mxdl.online/tools/play-ht.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/rask-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/rask-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/resemble-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/resemble-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/nano-search.html</loc>
+    <loc>http://ai.mxdl.online/tools/nano-search.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/kling-image.html</loc>
+    <loc>http://ai.mxdl.online/tools/kling-image.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/gaoding-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/gaoding-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/chuangkebao-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/chuangkebao-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/akkio.html</loc>
+    <loc>http://ai.mxdl.online/tools/akkio.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/polymer.html</loc>
+    <loc>http://ai.mxdl.online/tools/polymer.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/rytr.html</loc>
+    <loc>http://ai.mxdl.online/tools/rytr.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/anyword.html</loc>
+    <loc>http://ai.mxdl.online/tools/anyword.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/simplified.html</loc>
+    <loc>http://ai.mxdl.online/tools/simplified.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/opencody.html</loc>
+    <loc>http://ai.mxdl.online/tools/opencody.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/munch.html</loc>
+    <loc>http://ai.mxdl.online/tools/munch.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/visily.html</loc>
+    <loc>http://ai.mxdl.online/tools/visily.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/brainly.html</loc>
+    <loc>http://ai.mxdl.online/tools/brainly.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/youdao-ai.html</loc>
+    <loc>http://ai.mxdl.online/tools/youdao-ai.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://ai.mxdl.online/tools/smartly.html</loc>
+    <loc>http://ai.mxdl.online/tools/smartly.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>

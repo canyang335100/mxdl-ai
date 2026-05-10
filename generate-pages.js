@@ -35,7 +35,7 @@ const CATEGORIES = {
 
 const PRICE_LABELS = { 'free': '免费', 'free-premium': '免费增值', 'paid': '付费' };
 const PRICE_COLORS = { 'free': '#22c55e', 'free-premium': '#6366f1', 'paid': '#ef4444' };
-const SITE_URL = 'https://ai.mxdl.online';
+const SITE_URL = 'http://ai.mxdl.online';
 
 function getAffiliateUrl(toolId, defaultUrl) {
     return affiliates[toolId] || defaultUrl;
